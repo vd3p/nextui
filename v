@@ -572,8 +572,8 @@ function Library:create_ui()
     local ContentArea = Instance.new("Frame")
     ContentArea.Name = "ContentArea"
     ContentArea.BackgroundTransparency = 1
-    ContentArea.Position = UDim2.new(0, 0, 0, 70) -- ⬅️ ينزل تحت الهيدر
-    ContentArea.Size = UDim2.new(1, 0, 1, -70)
+    ContentArea.Position = UDim2.new(0, 0, 0, 110)
+    ContentArea.Size = UDim2.new(1, 0, 1, -110)
     ContentArea.Parent = Handler
 
     local Tabs = Instance.new('ScrollingFrame')
@@ -652,6 +652,12 @@ function Library:create_ui()
     local Sections = Instance.new('Folder')
     Sections.Name = 'Sections'
     Sections.Parent = ContentArea
+
+local SectionsPadding = Instance.new("UIPadding")
+SectionsPadding.PaddingTop = UDim.new(0, 20)
+SectionsPadding.PaddingLeft = UDim.new(0, 10)
+SectionsPadding.PaddingRight = UDim.new(0, 10)
+SectionsPadding.Parent = Sections
     
     local Minimize = Instance.new('TextButton')
     Minimize.FontFace = Font.new('rbxasset://fonts/families/SourceSansPro.json', Enum.FontWeight.Regular, Enum.FontStyle.Normal)
